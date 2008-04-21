@@ -1,0 +1,1584 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE MAGE-ML SYSTEM "MAGE-ML.dtd">
+<MAGE-ML identifier="Affymetrix.com">
+	<PropertySets_assnlist>
+		<NameValueType name="FileVersion" value="1.0" type="string"/>
+		<NameValueType name="CreatingUser" value="skaush" type="string"/>
+		<NameValueType name="CreationDate" value="2005-07-18T18:27:24Z" type="date"/>
+		<NameValueType name="SoftwareVersion" value="GCOS 1.3.0" type="string"/>
+		<NameValueType name="MachineName" value="DJCV4V01" type="string"/>
+		<NameValueType name="Comment" value="" type="string"/>
+	</PropertySets_assnlist>
+	<AuditAndSecurity_package>
+		<Contact_assnlist>
+			<Person identifier="DJCV4V01:Person:skaush" name="skaush"/>
+		</Contact_assnlist>
+	</AuditAndSecurity_package>
+<Protocol_package>
+	<Hardware_assnlist>
+		<Hardware identifier="Affymetrix.com:Hardware:FluidicsStation">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationNumber" name="Station Number">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationPosition" name="Position">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationID" name="Station ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationStage" name="Station Stage">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="HardwareType" value="Fluidics Station"/>
+			</Type_assn>
+		</Hardware>
+		<Hardware identifier="Affymetrix.com:Hardware:Scanner">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerID" name="Scanner ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerType" name="Scanner Type">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="HardwareType" value="Scanner"/>
+			</Type_assn>
+		</Hardware>
+	</Hardware_assnlist>
+	<Software_assnlist>
+		<Software identifier="Affymetrix.com:Software:GeneChip">
+			<Type_assn>
+				<OntologyEntry category="SoftwareType" value="Acquisition and analysis software"/>
+			</Type_assn>
+		</Software>
+	</Software_assnlist>
+	<Protocol_assnlist>
+		<Protocol identifier="Affymetrix.com:Protocol:Hybridization-NA" name="NA" title="Fluidics Station Protocol">
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Hybridization"/>
+			</Type_assn>
+			<Hardwares_assnreflist>
+				<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+			</Hardwares_assnreflist>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:Scan-M10" title="M10 Scan">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:Operator" name="Operator">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanDate" name="Scan Date">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanComments" name="Scan Comments">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerType" name="Scanner Type">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerID" name="Scanner ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanFilter" name="Scan Filter">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanTemperature" name="Scan Temperature">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanPixelSize" name="Scan Pixel Size">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanLineLength" name="Scan Line Length">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanNumberofLines" name="Scan # of Lines">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanHorizontalOffset" name="Scan Horizontal Offset">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanVerticalOffset" name="Scan Vertical Offset">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NumberofScans" name="# of Scans">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanArcRadius" name="Scan ArcRadius">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanOrientation" name="Scan Orientation">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:LaserSpotSize" name="Laser SpotSize">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:PMTGain" name="PMT Gain">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AtlasARCType" name="AtlasARCType">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AtlasPixelTime" name="AtlasPixelTime">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VerifyGrid" name="Verify Grid">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:GridAlignFlag" name="Grid Align Flag">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:GridCoordinates" name="Grid Coordinates">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Scan"/>
+			</Type_assn>
+			<Hardwares_assnreflist>
+				<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+			</Hardwares_assnreflist>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:FeatureExtraction" title="CEL Analysis">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:percentile" name="percentile">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CellMargin" name="Cell Margin">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CellFileVersion" name="Cell File Version">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:OutlierLow" name="OutlierLow">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:OutlierHigh" name="OutlierHigh">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="CEL Analysis"/>
+			</Type_assn>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+	</Protocol_assnlist>
+</Protocol_package>
+<BioMaterial_package>
+	<BioMaterial_assnlist>
+		<BioSource identifier="DJCV4V01:BioSource:Wash_Stain_Example" name="Wash_Stain_Example">
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:34:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Characteristics_assnlist>
+				<OntologyEntry category="Affymetrix:Sample Project" value="DTT_1_1_Sample_data"/>
+			</Characteristics_assnlist>
+			<MaterialType_assn>
+				<OntologyEntry category="MaterialType" value="Sample File"/>
+			</MaterialType_assn>
+			<SourceContact_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:skaush"/>
+			</SourceContact_assnreflist>
+		</BioSource>
+	</BioMaterial_assnlist>
+</BioMaterial_package>
+<ArrayDesign_package>
+	<ArrayDesign_assnlist>
+		<PhysicalArrayDesign identifier="Affymetrix.com:PhysicalArrayDesign:TrueTag_10K_A" name="TrueTag_10K_A"/>
+	</ArrayDesign_assnlist>
+</ArrayDesign_package>
+<Array_package>
+	<Array_assnlist>
+		<Array identifier="Affymetrix.com:Array:Sample_2_4C_Scan">
+			<ArrayDesign_assnref>
+				<PhysicalArrayDesign_ref identifier="Affymetrix.com:PhysicalArrayDesign:TrueTag_10K_A"/>
+			</ArrayDesign_assnref>
+			<Information_assnref>
+				<ArrayManufacture_ref identifier=""/>
+			</Information_assnref>
+		</Array>
+	</Array_assnlist>
+</Array_package>
+<BioAssay_package>
+	<Channel_assnlist>
+		<Channel identifier="Affymetrix.com:Channel:655">
+			<PropertySets_assnlist>
+				<NameValueType name="Wavelength" value="655"/>
+			</PropertySets_assnlist>
+		</Channel>
+		<Channel identifier="Affymetrix.com:Channel:705">
+			<PropertySets_assnlist>
+				<NameValueType name="Wavelength" value="705"/>
+			</PropertySets_assnlist>
+		</Channel>
+		<Channel identifier="Affymetrix.com:Channel:605">
+			<PropertySets_assnlist>
+				<NameValueType name="Wavelength" value="605"/>
+			</PropertySets_assnlist>
+		</Channel>
+		<Channel identifier="Affymetrix.com:Channel:565">
+			<PropertySets_assnlist>
+				<NameValueType name="Wavelength" value="565"/>
+			</PropertySets_assnlist>
+		</Channel>
+	</Channel_assnlist>
+	<BioAssay_assnlist>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_Scan:Hybridization" name="Sample_2_4C_Scan">
+			<BioAssayCreation_assn>
+				<Hybridization identifier="DJCV4V01:Hybridization:Sample_2_4C_Scan" name="NA">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:39:00Z">
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationNumber"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationPosition"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationStage"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Hybridization-NA"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Array_assnref>
+						<Array_ref identifier="Affymetrix.com:Array:Sample_2_4C_Scan"/>
+					</Array_assnref>
+				</Hybridization>
+			</BioAssayCreation_assn>
+		</PhysicalBioAssay>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanA" name="Sample_2_4C_ScanA">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanA.DAT"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:43:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:43:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<PhysicalBioAssayData_assnlist>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanA:DAT" URI="Sample_2_4C_ScanA.DAT">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:43:00Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:43:00Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Channels_assnreflist>
+						<Channel_ref identifier="Affymetrix.com:Channel:655"/>
+					</Channels_assnreflist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="Affymetrix_DAT"/>
+					</Format_assn>
+				</Image>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanA:JPG" URI="Sample_2_4C_ScanA.JPG">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:43:30Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:43:31Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="JPEG"/>
+					</Format_assn>
+				</Image>
+			</PhysicalBioAssayData_assnlist>
+			<BioAssayTreatments_assnlist>
+				<ImageAcquisition identifier="DJCV4V01:ImageAcquisition:Sample_2_4C_ScanA">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:43:28Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="skaush">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Operator"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Jul 16 2005 10:43:28PM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanDate"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="SW_Ver=4.0;HW_Ver=;ScannerID=M10SIM;Pixellations=0.5074,0.7000,1.0900,1.5600,2.5000,;EmissionFilters=570,532,565,605,655,705,;AutoloaderInstalled=1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanComments"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10SIM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="655">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanFilter"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanTemperature"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanPixelSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanLineLength"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1118">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanNumberofLines"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanHorizontalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="100.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanVerticalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumberofScans"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanArcRadius"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="6">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanOrientation"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:LaserSpotSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:PMTGain"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasARCType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasPixelTime"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="128">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerifyGrid"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="255">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridAlignFlag"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="{(35,82),(1053,84),(33,1100),(1051,1102)}">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridCoordinates"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Checkerboard - 6.0.26">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="M10SIM">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="M10">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Scan-M10"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Target_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_Scan"/>
+					</Target_assnref>
+					<Images_assnreflist>
+						<Image_ref identifier="DJCV4V01:Image:Sample_2_4C_ScanA:DAT"/>
+					</Images_assnreflist>
+				</ImageAcquisition>
+			</BioAssayTreatments_assnlist>
+		</PhysicalBioAssay>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanB" name="Sample_2_4C_ScanB">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanB.DAT"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:44:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:44:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<PhysicalBioAssayData_assnlist>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanB:DAT" URI="Sample_2_4C_ScanB.DAT">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:44:00Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:44:00Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Channels_assnreflist>
+						<Channel_ref identifier="Affymetrix.com:Channel:705"/>
+					</Channels_assnreflist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="Affymetrix_DAT"/>
+					</Format_assn>
+				</Image>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanB:JPG" URI="Sample_2_4C_ScanB.JPG">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:44:07Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:44:08Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="JPEG"/>
+					</Format_assn>
+				</Image>
+			</PhysicalBioAssayData_assnlist>
+			<BioAssayTreatments_assnlist>
+				<ImageAcquisition identifier="DJCV4V01:ImageAcquisition:Sample_2_4C_ScanB">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:44:05Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="skaush">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Operator"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Jul 16 2005 10:44:05PM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanDate"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="SW_Ver=4.0;HW_Ver=;ScannerID=M10SIM;Pixellations=0.5074,0.7000,1.0900,1.5600,2.5000,;EmissionFilters=570,532,565,605,655,705,;AutoloaderInstalled=1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanComments"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10SIM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="705">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanFilter"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanTemperature"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanPixelSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanLineLength"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1118">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanNumberofLines"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanHorizontalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="100.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanVerticalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumberofScans"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanArcRadius"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="6">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanOrientation"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:LaserSpotSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:PMTGain"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasARCType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasPixelTime"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="128">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerifyGrid"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="255">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridAlignFlag"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="{(35,82),(1053,84),(33,1100),(1051,1102)}">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridCoordinates"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Checkerboard - 6.0.26">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="M10SIM">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="M10">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Scan-M10"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Target_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_Scan"/>
+					</Target_assnref>
+					<Images_assnreflist>
+						<Image_ref identifier="DJCV4V01:Image:Sample_2_4C_ScanB:DAT"/>
+					</Images_assnreflist>
+				</ImageAcquisition>
+			</BioAssayTreatments_assnlist>
+		</PhysicalBioAssay>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanC" name="Sample_2_4C_ScanC">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanC.DAT"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:44:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:44:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<PhysicalBioAssayData_assnlist>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanC:DAT" URI="Sample_2_4C_ScanC.DAT">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:44:00Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:44:00Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Channels_assnreflist>
+						<Channel_ref identifier="Affymetrix.com:Channel:605"/>
+					</Channels_assnreflist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="Affymetrix_DAT"/>
+					</Format_assn>
+				</Image>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanC:JPG" URI="Sample_2_4C_ScanC.JPG">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:44:45Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:44:45Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="JPEG"/>
+					</Format_assn>
+				</Image>
+			</PhysicalBioAssayData_assnlist>
+			<BioAssayTreatments_assnlist>
+				<ImageAcquisition identifier="DJCV4V01:ImageAcquisition:Sample_2_4C_ScanC">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:44:43Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="skaush">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Operator"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Jul 16 2005 10:44:43PM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanDate"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="SW_Ver=4.0;HW_Ver=;ScannerID=M10SIM;Pixellations=0.5074,0.7000,1.0900,1.5600,2.5000,;EmissionFilters=570,532,565,605,655,705,;AutoloaderInstalled=1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanComments"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10SIM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="605">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanFilter"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanTemperature"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanPixelSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanLineLength"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1118">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanNumberofLines"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanHorizontalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="100.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanVerticalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumberofScans"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanArcRadius"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="6">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanOrientation"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:LaserSpotSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:PMTGain"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasARCType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasPixelTime"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="128">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerifyGrid"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="255">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridAlignFlag"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="{(35,82),(1053,84),(33,1100),(1051,1102)}">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridCoordinates"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Checkerboard - 6.0.26">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="M10SIM">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="M10">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Scan-M10"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Target_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_Scan"/>
+					</Target_assnref>
+					<Images_assnreflist>
+						<Image_ref identifier="DJCV4V01:Image:Sample_2_4C_ScanC:DAT"/>
+					</Images_assnreflist>
+				</ImageAcquisition>
+			</BioAssayTreatments_assnlist>
+		</PhysicalBioAssay>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanD" name="Sample_2_4C_ScanD">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanD.DAT"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:45:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:45:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<PhysicalBioAssayData_assnlist>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanD:DAT" URI="Sample_2_4C_ScanD.DAT">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:45:00Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:45:00Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Channels_assnreflist>
+						<Channel_ref identifier="Affymetrix.com:Channel:565"/>
+					</Channels_assnreflist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="Affymetrix_DAT"/>
+					</Format_assn>
+				</Image>
+				<Image identifier="DJCV4V01:Image:Sample_2_4C_ScanD:JPG" URI="Sample_2_4C_ScanD.JPG">
+					<AuditTrail_assnlist>
+						<Audit date="2005-07-17T05:45:24Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2005-07-17T05:45:25Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="JPEG"/>
+					</Format_assn>
+				</Image>
+			</PhysicalBioAssayData_assnlist>
+			<BioAssayTreatments_assnlist>
+				<ImageAcquisition identifier="DJCV4V01:ImageAcquisition:Sample_2_4C_ScanD">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:45:23Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="skaush">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Operator"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Jul 16 2005 10:45:23PM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanDate"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="SW_Ver=4.0;HW_Ver=;ScannerID=M10SIM;Pixellations=0.5074,0.7000,1.0900,1.5600,2.5000,;EmissionFilters=570,532,565,605,655,705,;AutoloaderInstalled=1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanComments"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="M10SIM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="565">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanFilter"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanTemperature"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanPixelSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanLineLength"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1118">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanNumberofLines"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanHorizontalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="100.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanVerticalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumberofScans"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanArcRadius"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="6">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanOrientation"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:LaserSpotSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2795.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:PMTGain"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasARCType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AtlasPixelTime"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="128">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerifyGrid"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="255">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridAlignFlag"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="{(35,82),(1053,84),(33,1100),(1051,1102)}">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridCoordinates"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Checkerboard - 6.0.26">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="M10SIM">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="M10">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Scan-M10"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Target_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_Scan"/>
+					</Target_assnref>
+					<Images_assnreflist>
+						<Image_ref identifier="DJCV4V01:Image:Sample_2_4C_ScanD:DAT"/>
+					</Images_assnreflist>
+				</ImageAcquisition>
+			</BioAssayTreatments_assnlist>
+		</PhysicalBioAssay>
+		<MeasuredBioAssay identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanA" name="Sample_2_4C_ScanA">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanA.CEL"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:43:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:43:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<FeatureExtraction_assn>
+				<FeatureExtraction identifier="Affymetrix.com:FeatureExtraction:FeatureExtraction">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-16">
+							<ParameterValues_assnlist>
+								<ParameterValue value="FeatureExtraction - 6.2.33">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="75">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:percentile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellMargin"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellFileVersion"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.004000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierLow"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierHigh"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:FeatureExtraction"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<PhysicalBioAssaySource_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanA"/>
+					</PhysicalBioAssaySource_assnref>
+				</FeatureExtraction>
+			</FeatureExtraction_assn>
+			<MeasuredBioAssayData_assnreflist>
+				<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:Sample_2_4C_ScanA"/>
+			</MeasuredBioAssayData_assnreflist>
+		</MeasuredBioAssay>
+		<MeasuredBioAssay identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanB" name="Sample_2_4C_ScanB">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanB.CEL"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:44:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:44:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<FeatureExtraction_assn>
+				<FeatureExtraction identifier="Affymetrix.com:FeatureExtraction:FeatureExtraction">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-16">
+							<ParameterValues_assnlist>
+								<ParameterValue value="FeatureExtraction - 6.2.33">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="75">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:percentile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellMargin"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellFileVersion"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.004000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierLow"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierHigh"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:FeatureExtraction"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<PhysicalBioAssaySource_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanB"/>
+					</PhysicalBioAssaySource_assnref>
+				</FeatureExtraction>
+			</FeatureExtraction_assn>
+			<MeasuredBioAssayData_assnreflist>
+				<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:Sample_2_4C_ScanB"/>
+			</MeasuredBioAssayData_assnreflist>
+		</MeasuredBioAssay>
+		<MeasuredBioAssay identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanC" name="Sample_2_4C_ScanC">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanC.CEL"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:44:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:44:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<FeatureExtraction_assn>
+				<FeatureExtraction identifier="Affymetrix.com:FeatureExtraction:FeatureExtraction">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-16">
+							<ParameterValues_assnlist>
+								<ParameterValue value="FeatureExtraction - 6.2.33">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="75">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:percentile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellMargin"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellFileVersion"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.004000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierLow"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierHigh"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:FeatureExtraction"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<PhysicalBioAssaySource_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanC"/>
+					</PhysicalBioAssaySource_assnref>
+				</FeatureExtraction>
+			</FeatureExtraction_assn>
+			<MeasuredBioAssayData_assnreflist>
+				<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:Sample_2_4C_ScanC"/>
+			</MeasuredBioAssayData_assnreflist>
+		</MeasuredBioAssay>
+		<MeasuredBioAssay identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanD" name="Sample_2_4C_ScanD">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="TrueTag_10K_A"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\Sample_2_4C_ScanD.CEL"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:45:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:45:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<FeatureExtraction_assn>
+				<FeatureExtraction identifier="Affymetrix.com:FeatureExtraction:FeatureExtraction">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-16">
+							<ParameterValues_assnlist>
+								<ParameterValue value="FeatureExtraction - 6.2.33">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="75">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:percentile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellMargin"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellFileVersion"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.004000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierLow"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierHigh"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:FeatureExtraction"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<PhysicalBioAssaySource_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanD"/>
+					</PhysicalBioAssaySource_assnref>
+				</FeatureExtraction>
+			</FeatureExtraction_assn>
+			<MeasuredBioAssayData_assnreflist>
+				<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:Sample_2_4C_ScanD"/>
+			</MeasuredBioAssayData_assnreflist>
+		</MeasuredBioAssay>
+	</BioAssay_assnlist>
+</BioAssay_package>
+<Experiment_package>
+	<Experiment_assnlist>
+		<Experiment identifier="DJCV4V01:Experiment:Sample_2_4C_Scan" name="Sample_2_4C_Scan">
+			<PropertySets_assnlist>
+				<NameValueType name="Assay Type" value="Universal" type="string"/>
+				<NameValueType name="Probe Array Type" value="TrueTag_10K_A" type="string"/>
+				<NameValueType name="Barcode" value="TrueTag_10K_A1" type="string"/>
+				<NameValueType name="AutomationFlag" value="0" type="string"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:39:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Providers_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:skaush"/>
+			</Providers_assnreflist>
+			<BioAssays_assnreflist>
+				<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanA"/>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanA"/>
+				<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanB"/>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanB"/>
+				<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanC"/>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanC"/>
+				<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:Sample_2_4C_ScanD"/>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:Sample_2_4C_ScanD"/>
+			</BioAssays_assnreflist>
+			<ExperimentDesigns_assnlist>
+				<ExperimentDesign/>
+			</ExperimentDesigns_assnlist>
+		</Experiment>
+	</Experiment_assnlist>
+</Experiment_package>
+</MAGE-ML>

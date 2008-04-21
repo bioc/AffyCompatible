@@ -1,0 +1,35 @@
+
+<!ENTITY % ContentType "CDATA">
+
+<!ELEMENT NetAffxAnnotFileList (Status?, Array*) >
+
+<!ELEMENT Status (#PCDATA)>
+
+<!ELEMENT Array (Annotation+) >
+<!ATTLIST Array
+  name CDATA #REQUIRED
+>
+
+<!ELEMENT Annotation (Comment?, File)>
+<!ATTLIST Annotation
+  type CDATA #REQUIRED
+  description CDATA #IMPLIED
+>
+
+<!ELEMENT Comment (#PCDATA)>
+
+<!ELEMENT File (URL+)>
+<!ATTLIST File
+  name CDATA #REQUIRED
+  date CDATA #REQUIRED
+  type %ContentType; #IMPLIED
+  size CDATA #IMPLIED
+  crc32 CDATA #IMPLIED
+>
+
+<!ELEMENT URL (#PCDATA)>
+<!ATTLIST URL
+  compression %ContentType; #IMPLIED
+  size CDATA #IMPLIED
+  crc32 CDATA #IMPLIED
+>

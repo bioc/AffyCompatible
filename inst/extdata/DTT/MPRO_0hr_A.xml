@@ -1,0 +1,1369 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE MAGE-ML SYSTEM "MAGE-ML.dtd">
+<MAGE-ML identifier="Affymetrix.com">
+	<PropertySets_assnlist>
+		<NameValueType name="FileVersion" value="1.0" type="string"/>
+		<NameValueType name="CreatingUser" value="skaush" type="string"/>
+		<NameValueType name="CreationDate" value="2005-07-18T18:32:58Z" type="date"/>
+		<NameValueType name="SoftwareVersion" value="GCOS 1.3.0" type="string"/>
+		<NameValueType name="MachineName" value="DJCV4V01" type="string"/>
+		<NameValueType name="Comment" value="" type="string"/>
+	</PropertySets_assnlist>
+	<AuditAndSecurity_package>
+		<Contact_assnlist>
+			<Person identifier="DJCV4V01:Person:mleliv" name="mleliv"/>
+			<Person identifier="DJCV4V01:Person:skaush" name="skaush"/>
+		</Contact_assnlist>
+	</AuditAndSecurity_package>
+<Protocol_package>
+	<Hardware_assnlist>
+		<Hardware identifier="Affymetrix.com:Hardware:FluidicsStation">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationNumber" name="Station Number">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationPosition" name="Position">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationID" name="Station ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationStage" name="Station Stage">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="HardwareType" value="Fluidics Station"/>
+			</Type_assn>
+		</Hardware>
+		<Hardware identifier="Affymetrix.com:Hardware:Scanner">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerID" name="Scanner ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerType" name="Scanner Type">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="HardwareType" value="Scanner"/>
+			</Type_assn>
+		</Hardware>
+	</Hardware_assnlist>
+	<Software_assnlist>
+		<Software identifier="Affymetrix.com:Software:GeneChip">
+			<Type_assn>
+				<OntologyEntry category="SoftwareType" value="Acquisition and analysis software"/>
+			</Type_assn>
+		</Software>
+	</Software_assnlist>
+	<Protocol_assnlist>
+		<Protocol identifier="Affymetrix.com:Protocol:Hybridization-NA" name="NA" title="Fluidics Station Protocol">
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Hybridization"/>
+			</Type_assn>
+			<Hardwares_assnreflist>
+				<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+			</Hardwares_assnreflist>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:Scan-HP" title="HP Scan">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:Operator" name="Operator">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanDate" name="Scan Date">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanComments" name="Scan Comments">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerType" name="Scanner Type">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScannerID" name="Scanner ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanFilter" name="Scan Filter">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanTemperature" name="Scan Temperature">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanPixelSize" name="Scan Pixel Size">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanLineLength" name="Scan Line Length">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanNumberofLines" name="Scan # of Lines">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanHorizontalOffset" name="Scan Horizontal Offset">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScanVerticalOffset" name="Scan Vertical Offset">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NumberofScans" name="# of Scans">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VerifyGrid" name="Verify Grid">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:GridAlignFlag" name="Grid Align Flag">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:GridCoordinates" name="Grid Coordinates">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Scan"/>
+			</Type_assn>
+			<Hardwares_assnreflist>
+				<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+			</Hardwares_assnreflist>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:Percentile" title="CEL Analysis">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:percentile" name="percentile">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CellMargin" name="Cell Margin">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CellFileVersion" name="Cell File Version">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:OutlierLow" name="OutlierLow">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:OutlierHigh" name="OutlierHigh">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="CEL Analysis"/>
+			</Type_assn>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:ExpressionStat" title="CHP Analysis">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:HorizontalZones" name="HorizontalZones">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VerticalZones" name="VerticalZones">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NumBGCells" name="NumBGCells">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormFactor" name="NormFactor">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TGT" name="TGT">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleFactor" name="ScaleFactor">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:IntensityLowPercent" name="IntensityLowPercent">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:IntensityHighPercent" name="IntensityHighPercent">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Alpha1" name="Alpha1">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Alpha2" name="Alpha2">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Tau" name="Tau">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ContrastTau" name="ContrastTau">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Epsilon" name="Epsilon">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCSB" name="TuningConstantCSB">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogInten" name="TuningConstantCAvgLogInten">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogRatio" name="TuningConstantCAvgLogRatio">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCGammas" name="TuningConstantCGammas">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonSB" name="EpsilonSB">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonAvgLogInten" name="EpsilonAvgLogInten">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonAvgLogRatio" name="EpsilonAvgLogRatio">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonGammas" name="EpsilonGammas">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:SmoothFactorBG" name="SmoothFactorBG">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NoiseFrac" name="NoiseFrac">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleTau" name="ScaleTau">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Delta" name="Delta">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma1H" name="Gamma1H">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma1L" name="Gamma1L">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma2H" name="Gamma2H">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma2L" name="Gamma2L">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Perturbation" name="Perturbation">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CMultiplier" name="CMultiplier">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BHCoef" name="BHCoef">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BLCoef" name="BLCoef">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BiasCorrect" name="BiasCorrect">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:RelConfInterval" name="RelConfInterval">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:STP" name="STP">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VersionNumber" name="Version Number">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BaselineFile" name="Baseline File">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleMaskFile" name="Scale Mask File">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormMaskFile" name="Norm Mask File">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ProbeMaskFile" name="Probe Mask File">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormMethod" name="NormMethod">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:SFMethod" name="SFMethod">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ProgID" name="ProgID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:UsersetUsed" name="UsersetUsed">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="CHP Analysis"/>
+			</Type_assn>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+	</Protocol_assnlist>
+</Protocol_package>
+<BioMaterial_package>
+	<BioMaterial_assnlist>
+		<BioSource identifier="DJCV4V01:BioSource:MPRO Hour 0" name="MPRO Hour 0">
+			<PropertySets_assnlist>
+				<NameValueType name="Sample Template Name" value="MIAME Sample Information" type="string">
+					<PropertySets_assnlist>
+						<NameValueType name="Active" value="1" type="integer"/>
+						<NameValueType name="Attributes">
+							<PropertySets_assnlist>
+								<NameValueType name="Affymetrix.com:Genus">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:species">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Strain/Line">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Individual">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Sample Provider">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Sex">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Age">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Developmental State">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Tissue">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Cell Type">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Genetic Modifications">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Genetic Characteristics">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Disease State">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Reference to Clinical Data">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Growth Conditions">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:in vivo Treatments">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Tissue Harvesting Method">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Extract Method">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Molecule Type">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Amplification">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Amount">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Label">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+								<NameValueType name="Affymetrix.com:Label Incorporation">
+									<PropertySets_assnlist>
+										<NameValueType name="Required" value="0" type="integer"/>
+										<NameValueType name="Active" value="1" type="integer"/>
+										<NameValueType name="Value" value="" type="string"/>
+										<NameValueType name="Type" value="string" type="string"/>
+									</PropertySets_assnlist>
+								</NameValueType>
+							</PropertySets_assnlist>
+						</NameValueType>
+					</PropertySets_assnlist>
+				</NameValueType>
+				<NameValueType name="Genus" value="Mus" type="string"/>
+				<NameValueType name="species" value="musculus" type="string"/>
+				<NameValueType name="Strain/Line" value="" type="string"/>
+				<NameValueType name="Individual" value="" type="string"/>
+				<NameValueType name="Sample Provider" value="Steve Collins and Tarif Awad - Fred Hutchinson Cancer Research Center - Seattle WA" type="string"/>
+				<NameValueType name="Sex" value="" type="string"/>
+				<NameValueType name="Age" value="" type="string"/>
+				<NameValueType name="Developmental State" value="Myeloid Progenitor - Undifferentiated Cells towards Differentiated Neutrophils" type="string"/>
+				<NameValueType name="Tissue" value="Myeloid - Bone Marrow" type="string"/>
+				<NameValueType name="Cell Type" value="MPRO cell line (Murine Promyelocyte)  ATCC clone 2.1" type="string"/>
+				<NameValueType name="Genetic Modifications" value="dominant negative RAR alpha receptor" type="string"/>
+				<NameValueType name="Genetic Characteristics" value="block in retinoic acid signaling" type="string"/>
+				<NameValueType name="Disease State" value="" type="string"/>
+				<NameValueType name="Reference to Clinical Data" value="" type="string"/>
+				<NameValueType name="Growth Conditions" value="" type="string"/>
+				<NameValueType name="in vivo Treatments" value="" type="string"/>
+				<NameValueType name="Tissue Harvesting Method" value="" type="string"/>
+				<NameValueType name="Extract Method" value="" type="string"/>
+				<NameValueType name="Molecule Type" value="" type="string"/>
+				<NameValueType name="Amplification" value="" type="string"/>
+				<NameValueType name="Amount" value="" type="string"/>
+				<NameValueType name="Label" value="" type="string"/>
+				<NameValueType name="Label Incorporation" value="" type="string"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2004-07-21T17:51:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Characteristics_assnlist>
+				<OntologyEntry category="Affymetrix:Sample Project" value="Neutrophil Differentiation"/>
+			</Characteristics_assnlist>
+			<MaterialType_assn>
+				<OntologyEntry category="MaterialType" value="total RNA"/>
+			</MaterialType_assn>
+			<SourceContact_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+			</SourceContact_assnreflist>
+		</BioSource>
+	</BioMaterial_assnlist>
+</BioMaterial_package>
+<ArrayDesign_package>
+	<ArrayDesign_assnlist>
+		<PhysicalArrayDesign identifier="Affymetrix.com:PhysicalArrayDesign:MG_U74Av2" name="MG_U74Av2"/>
+	</ArrayDesign_assnlist>
+</ArrayDesign_package>
+<Array_package>
+	<Array_assnlist>
+		<Array identifier="Affymetrix.com:Array:MPRO_0hr_A">
+			<ArrayDesign_assnref>
+				<PhysicalArrayDesign_ref identifier="Affymetrix.com:PhysicalArrayDesign:MG_U74Av2"/>
+			</ArrayDesign_assnref>
+			<Information_assnref>
+				<ArrayManufacture_ref identifier=""/>
+			</Information_assnref>
+		</Array>
+	</Array_assnlist>
+</Array_package>
+<BioAssay_package>
+	<Channel_assnlist>
+		<Channel identifier="Affymetrix.com:Channel:0">
+			<PropertySets_assnlist>
+				<NameValueType name="Wavelength" value="0"/>
+			</PropertySets_assnlist>
+		</Channel>
+	</Channel_assnlist>
+	<BioAssay_assnlist>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:MPRO_0hr_A:Hybridization" name="MPRO_0hr_A">
+			<BioAssayCreation_assn>
+				<Hybridization identifier="DJCV4V01:Hybridization:MPRO_0hr_A" name="NA">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2004-07-21T17:53:00Z">
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationNumber"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationPosition"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="1819113518">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="Completed">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationStage"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Hybridization-NA"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Array_assnref>
+						<Array_ref identifier="Affymetrix.com:Array:MPRO_0hr_A"/>
+					</Array_assnref>
+				</Hybridization>
+			</BioAssayCreation_assn>
+		</PhysicalBioAssay>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:MPRO_0hr_A" name="MPRO_0hr_A">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="MG_U74Av2"/>
+				<NameValueType name="Archived" value="1"/>
+				<NameValueType name="ArchivePath" value="MPRO_0hr_A.DATMPRO_0hr_A.DATMPRO_0hr_A.DATMPRO_0hr_A.DATMPRO_0hr_A.DAT"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2004-07-21T17:53:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2004-07-21T17:53:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<PhysicalBioAssayData_assnlist>
+				<Image identifier="DJCV4V01:Image:MPRO_0hr_A:DAT" URI="MPRO_0hr_A.DAT">
+					<AuditTrail_assnlist>
+						<Audit date="2004-07-21T17:53:00Z" action="creation">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+							</Performer_assnref>
+						</Audit>
+						<Audit date="2004-07-21T17:53:00Z" action="modification">
+							<Performer_assnref>
+								<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+							</Performer_assnref>
+						</Audit>
+					</AuditTrail_assnlist>
+					<Channels_assnreflist>
+						<Channel_ref identifier="Affymetrix.com:Channel:0"/>
+					</Channels_assnreflist>
+					<Format_assn>
+						<OntologyEntry category="ImageFormat" value="Affymetrix_DAT"/>
+					</Format_assn>
+				</Image>
+			</PhysicalBioAssayData_assnlist>
+			<BioAssayTreatments_assnlist>
+				<ImageAcquisition identifier="DJCV4V01:ImageAcquisition:MPRO_0hr_A">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2004-07-21T17:53:00Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="mleliv">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Operator"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="Jul 21 2004 10:53AM">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanDate"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanComments"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="HP">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value=" ">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanFilter"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanTemperature"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanPixelSize"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanLineLength"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanNumberofLines"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanHorizontalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScanVerticalOffset"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumberofScans"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="128">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerifyGrid"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="255">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridAlignFlag"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="{(0,0),(0,0),(0,0),(0,0)}">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:GridCoordinates"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="CheckerBoard">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value=" ">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="HP">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:ScannerType"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:Scanner"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Scan-HP"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Target_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:MPRO_0hr_A"/>
+					</Target_assnref>
+					<Images_assnreflist>
+						<Image_ref identifier="DJCV4V01:Image:MPRO_0hr_A:DAT"/>
+					</Images_assnreflist>
+				</ImageAcquisition>
+			</BioAssayTreatments_assnlist>
+		</PhysicalBioAssay>
+		<MeasuredBioAssay identifier="DJCV4V01:MeasuredBioAssay:MPRO_0hr_A" name="MPRO_0hr_A">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="MG_U74Av2"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\MPRO_0hr_A.CEL"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2001-10-22T20:41:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2004-07-21T17:53:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<FeatureExtraction_assn>
+				<FeatureExtraction identifier="Affymetrix.com:FeatureExtraction:Percentile">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-18">
+							<ParameterValues_assnlist>
+								<ParameterValue value="Percentile">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="75">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:percentile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellMargin"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CellFileVersion"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.004000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierLow"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:OutlierHigh"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Percentile"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<PhysicalBioAssaySource_assnref>
+						<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:MPRO_0hr_A"/>
+					</PhysicalBioAssaySource_assnref>
+				</FeatureExtraction>
+			</FeatureExtraction_assn>
+			<MeasuredBioAssayData_assnreflist>
+				<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:MPRO_0hr_A"/>
+			</MeasuredBioAssayData_assnreflist>
+		</MeasuredBioAssay>
+		<DerivedBioAssay identifier="DJCV4V01:DerivedBioAssay:MPRO_0hr_A" name="MPRO_0hr_A">
+			<PropertySets_assnlist>
+				<NameValueType name="ProbeArrayType" value="MG_U74Av2"/>
+				<NameValueType name="Archived" value="0"/>
+				<NameValueType name="ArchivePath" value="C:\GeneChip\Affy_Data\Data\MPRO_0hr_A.CHP"/>
+				<NameValueType name="UsersetUsed" value=""/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:32:00Z" action="creation">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+				<Audit date="2005-07-17T05:32:00Z" action="modification">
+					<Performer_assnref>
+						<Person_ref identifier="DJCV4V01:Person:skaush"/>
+					</Performer_assnref>
+				</Audit>
+			</AuditTrail_assnlist>
+			<Type_assn>
+				<OntologyEntry category="DerivedBioAssayType" value="Statistical CHP Analysis"/>
+			</Type_assn>
+			<DerivedBioAssayData_assnreflist>
+				<DerivedBioAssayData_ref identifier="DJCV4V01:DerivedBioAssayData:MPRO_0hr_A"/>
+			</DerivedBioAssayData_assnreflist>
+		</DerivedBioAssay>
+	</BioAssay_assnlist>
+</BioAssay_package>
+<BioAssayData_package>
+	<BioAssayDimension_assnlist>
+		<BioAssayDimension identifier="DJCV4V01:BioAssayDimension:CHP_MPRO_0hr_A">
+			<BioAssays_assnreflist>
+				<DerivedBioAssay_ref identifier="DJCV4V01:DerivedBioAssay:MPRO_0hr_A"/>
+			</BioAssays_assnreflist>
+		</BioAssayDimension>
+	</BioAssayDimension_assnlist>
+	<BioAssayMap_assnlist>
+		<BioAssayMap identifier="DJCV4V01:BioAssayMap:MPRO_0hr_A" name="MPRO_0hr_A">
+			<BioAssayMapTarget_assnref>
+				<DerivedBioAssay_ref identifier="DJCV4V01:DerivedBioAssay:MPRO_0hr_A"/>
+			</BioAssayMapTarget_assnref>
+			<SourceBioAssays_assnreflist>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:MPRO_0hr_A"/>
+			</SourceBioAssays_assnreflist>
+		</BioAssayMap>
+	</BioAssayMap_assnlist>
+	<BioAssayData_assnlist>
+		<DerivedBioAssayData identifier="DJCV4V01:DerivedBioAssayData:MPRO_0hr_A">
+			<BioAssayDimension_assnref>
+				<BioAssayDimension_ref identifier="DJCV4V01:BioAssayDimension:CHP_MPRO_0hr_A"/>
+			</BioAssayDimension_assnref>
+			<ProducerTransformation_assn>
+				<Transformation identifier="DJCV4V01:Transformation:MPRO_0hr_A">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-18">
+							<ParameterValues_assnlist>
+								<ParameterValue value="4">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:HorizontalZones"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="4">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VerticalZones"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NumBGCells"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NormFactor"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="500.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:TGT"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScaleFactor"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:IntensityLowPercent"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:IntensityHighPercent"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.040000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Alpha1"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.060000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Alpha2"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.015000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Tau"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.030000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ContrastTau"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Epsilon"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:TuningConstantCSB"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogInten"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogRatio"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:TuningConstantCGammas"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000100">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EpsilonSB"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000100">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EpsilonAvgLogInten"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000100">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EpsilonAvgLogRatio"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000100">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EpsilonGammas"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="100.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:SmoothFactorBG"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.500000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NoiseFrac"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="10.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScaleTau"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="9.536743e-007">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Delta"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.002500">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Gamma1H"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.002500">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Gamma1L"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.003000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Gamma2H"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.003000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Gamma2L"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1.100000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:Perturbation"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.200000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:CMultiplier"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="7.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:BHCoef"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.800000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:BLCoef"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:BiasCorrect"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0.975000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:RelConfInterval"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="3.000000">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:STP"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="ExpressionStat">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:AlgorithmName"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5.0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:VersionNumber"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:BaselineFile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ScaleMaskFile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NormMaskFile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ProbeMaskFile"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:NormMethod"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:SFMethod"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="GeneChip.CallGEBaseCall.1">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:ProgID"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="skaush_BN_MG_U74Av2_def">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:UsersetUsed"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:ExpressionStat"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<BioAssayDataSources_assnreflist>
+						<MeasuredBioAssayData_ref identifier="DJCV4V01:MeasuredBioAssayData:MPRO_0hr_A"/>
+					</BioAssayDataSources_assnreflist>
+					<BioAssayMapping_assn>
+						<BioAssayMapping>
+							<BioAssayMaps_assnreflist>
+								<BioAssayMap_ref identifier="DJCV4V01:BioAssayMap:MPRO_0hr_A"/>
+							</BioAssayMaps_assnreflist>
+						</BioAssayMapping>
+					</BioAssayMapping_assn>
+				</Transformation>
+			</ProducerTransformation_assn>
+		</DerivedBioAssayData>
+	</BioAssayData_assnlist>
+</BioAssayData_package>
+<Experiment_package>
+	<Experiment_assnlist>
+		<Experiment identifier="DJCV4V01:Experiment:MPRO_0hr_A" name="MPRO_0hr_A">
+			<PropertySets_assnlist>
+				<NameValueType name="Assay Type" value="Expression" type="string"/>
+				<NameValueType name="Probe Array Type" value="MG_U74Av2" type="string"/>
+				<NameValueType name="AutomationFlag" value="0" type="string"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2004-07-21T17:53:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Providers_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:mleliv"/>
+			</Providers_assnreflist>
+			<BioAssays_assnreflist>
+				<PhysicalBioAssay_ref identifier="Affymetrix.com:PhysicalBioAssay:MPRO_0hr_A"/>
+				<MeasuredBioAssay_ref identifier="DJCV4V01:MeasuredBioAssay:MPRO_0hr_A"/>
+				<DerivedBioAssay_ref identifier="DJCV4V01:DerivedBioAssay:MPRO_0hr_A"/>
+			</BioAssays_assnreflist>
+			<ExperimentDesigns_assnlist>
+				<ExperimentDesign/>
+			</ExperimentDesigns_assnlist>
+		</Experiment>
+	</Experiment_assnlist>
+</Experiment_package>
+</MAGE-ML>

@@ -1,0 +1,198 @@
+%\VignetteDepends{AffyCompatible}
+%\VignetteIndexEntry{Retrieving MAGE and ARR sample attributes}
+%\VignetteKeywords{tutorial, AffyCompatible, MAGE, ARR}
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\newcommand{\R}{{\textsf{R}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+\newcommand{\term}[1]{{\emph{#1}}}
+\newcommand{\Rpackage}[1]{\textsf{#1}}
+\newcommand{\Rfunction}[1]{\texttt{#1}}
+\newcommand{\Robject}[1]{\texttt{#1}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+
+\newcommand{\Affy}{Affymetrix}
+\newcommand{\Bioc}{Bioconductor}
+
+\title{Retrieving sample attributes}
+\author{Martin Morgan, Robert Gentleman}
+\date{Created: 12 April 2008}
+
+\begin{document}
+\maketitle
+
+\Affy{} provides mechanisms for specifying sample attributes,
+including attributes associated with sample processing. \Affy{}
+provides two types of sample attribute files. \texttt{ARR} files are
+newer, and are produced by the GeneGchip\textregistered{} Command
+Console (AGCC). \texttt{MAGE} files are created by the older GCOS
+software. This vignette describes how sample attributes can be
+retrieved from appropriate \Affy{} files. Additional functionality in
+this package facilitates navigation of \Affy{} NetAffx chip annotation
+files; parsing CHP and certain other \Affy{} files is available in
+\Rpackage{affxparser}.
+
+<<setup>>=
+library(AffyCompatible)
+@ 
+
+\section{Reading sample attributes from \texttt{ARR} files}
+
+\texttt{ARR} files are produced by AGCC, with one file per
+sample. Examples are include in this package.
+<<arr-examples>>=
+arrDir <- system.file("extdata", "ARR", package="AffyCompatible")
+arrFiles <- list.files(arrDir, pattern=".*ARR", full=TRUE)
+basename(arrFiles)
+@ 
+% 
+Use \Rfunction{readArr} to read a single file, or \Rfunction{sapply}
+to read several:
+<<readArr>>=
+arr <- readArr(arrFiles[[1]])
+arrs <- sapply(arrFiles, readArr)
+arrs[[1]]
+@ 
+% 
+The result is an object or list of objects of the auto-generated class
+\Rclass{ArraySetFile}. These objects contain information extracted
+from the \texttt{ARR} file, e.g., the type of the file, and the
+globally unique identifier; some attributes, e.g., creation date in
+this example, are not defined in this particular file. Access the
+values of these attributes with the \emph{accessor} implied by the
+label at the start of the line, e.g.
+<<arr-accessors>>=
+guid(arr)
+version(arr)
+@ 
+% 
+Simple accessors return their content. Some object slots have multiple
+values. These are indicated using notation like
+\code{PhayiscalArrays(1)} to indicate that the content is a vector (in
+this case of length 1) of \Rclass{PhysicalArrays} objects. Access the
+vector and its elements in the usual way, e.g.,
+<<physicalArrays-accessor>>=
+physicalArrays(arr)
+pas <- physicalArrays(arr)[[1]]
+pas
+@ 
+% 
+In this case, the first \code{physicalArrays} element is itself a
+vector of a slightly different object, \Rclass{PhysicalArray} (no `s'
+at the end!). We can further navigate the structure to find out
+information on the arrays used in this sample, e.g.,
+<<physicalArray-accessor>>=
+physicalArray(pas)[[1]]
+@ 
+% 
+User attributes associated with the sample can be recovered in a
+similar way:
+<<userAttribute>>=
+ua <- userAttribute(userAttributes(arr)[[1]])
+ua
+@ 
+% 
+A useful paradigm for retrieving either all information, or a specific
+attribute from several elements, e.g., the first 4, is
+<<userAttribute-access>>=
+lapply(ua[1:4], force)
+sapply(ua[1:4], name)
+@ 
+
+A second approach to navigating \texttt{ARR} files is to process the
+files as XML. For instance, one can read the first file as an xml
+document.
+<<ARR-readXml>>=
+xml <- readXml(arrFiles[[1]])
+@ 
+% 
+\R{} objects can be extracted from this document using the
+\Rfunction{xclass} function with the \emph{xpath} to the element. The
+xpath is implied by the navigation scheme outlined above.
+<<xclass-ARR>>=
+xclass(xml, "/ArraySetFile")
+xclass(xml, "/ArraySetFile/UserAttributes/UserAttribute[4]")
+@ 
+% 
+Notice that the return value from \Rfunction{xclass} is an instance of
+an R class.  For many elements, it is possible to abbreviate the full
+xpath
+<<xclass-abbrev-ARR>>=
+xclass(xml, "//UserAttribute[4]")
+sapply(xclass(xml, "//UserAttribute"), name)[1:4]
+@ 
+% 
+For advanced use, content is available through the interface provided
+by the XML package. This is faciliated by understanding the
+conventions used to map between XML element and attribute names, and R
+class and slot names. XML attribute names starting with upper-case
+letters have been replaced by lower-case slot names in R. Certain slot
+names have been replaced by the prefix \code{affx}. The list of
+reserve words and an example of a direct XML query are:
+<<xpath-query>>=
+AffyCompatible:::.xreserved()
+unlist(xpathApply(xml, "//UserAttribute/@Name", xmlValue))
+@ 
+
+\section{Reading sample attributes from \texttt{MAGE} files}
+
+\texttt{MAGE} files are produced by GCOS, with one file per
+sample. Examples are inluced in this package
+<<mage-examples>>=
+mageDir <- system.file("extdata", "DTT", package="AffyCompatible")
+mageFiles <- list.files(mageDir, pattern=".*xml", full=TRUE)
+basename(mageFiles)
+@ 
+% 
+Use \Rfunction{readMage} to read a single file, or \Rfunction{sapply}
+to read several:
+<<readMage>>=
+mage <- readMage(mageFiles[[1]])
+mages <- sapply(mageFiles, readMage)
+mages[[1]]
+@ 
+% 
+These objects can be navigated following the same paradigm as for ARR
+files, using accessors to arrive at desired end points. 
+<<mage-accessors>>=
+ba <- bioAssay_assnlist(bioAssay_package(mage)[[1]])[[1]]
+ba
+measuredBioAssay(ba)[[1]]
+@ 
+
+The objects can also be queried with \Rfunction{xclass}, and more
+directly with \Rfunction{xpathApply}.
+<<mage-readXml>>=
+xml <- readXml(mageFiles[[1]])
+xclass(xml, "//MeasuredBioAssay")[[1]]
+sapply(xclass(xml, "//Protocol/*/Parameter"), name)[1:10]
+xpathApply(xml, "//MeasuredBioAssay/@name", xmlValue)
+@ 
+% 
+Note that MAGE attribute names are lower-case, in contrast to ARR
+attribute names. A document describing XPaths to important MAGE attributes is referenced below. With this in hand,
+one can obtain, for instance, a named list of all hardware parameters, use
+<<mage-hardware-xml>>=
+hq <- "//Hybridization/*/ProtocolApplication/*/HardwareApplication/*/ParameterValue"
+hval <- xpathApply(xml, paste(hq, "/@value"), xmlValue)
+names(hval) <- xpathApply(xml, paste(hq, "//@identifier"), xmlValue)
+hval
+@ 
+
+\section{Additional resources}
+
+The package includes the document type definition used for automatic
+class generation.
+<<dtd>>=
+dtdDir <- system.file("extdata", package="AffyCompatible")
+list.files(dtdDir, pattern=".*dtd")
+@ 
+% 
+XPath information for MAGE attributes used by \Affy{} are defined at
+\url{http://www.affymetrix.com/support/developer/dtt_sdk/index.affx?terms=no}. 
+
+\end{document}

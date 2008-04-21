@@ -1,0 +1,7 @@
+importFrom(Biostrings, readFASTA)
+
+## other methods are exported with their generic
+exportMethods(show)
+
+## .* are not exported
+exportPattern("^[^\\.]")          # functions and generics (+ methods)

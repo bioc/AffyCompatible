@@ -1,0 +1,779 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE MAGE-ML SYSTEM "MAGE-ML.dtd">
+<MAGE-ML identifier="Affymetrix.com">
+	<PropertySets_assnlist>
+		<NameValueType name="FileVersion" value="1.0" type="string"/>
+		<NameValueType name="CreatingUser" value="skaush" type="string"/>
+		<NameValueType name="CreationDate" value="2005-07-18T18:26:28Z" type="date"/>
+		<NameValueType name="SoftwareVersion" value="GCOS 1.3.0" type="string"/>
+		<NameValueType name="MachineName" value="DJCV4V01" type="string"/>
+		<NameValueType name="Comment" value="" type="string"/>
+	</PropertySets_assnlist>
+	<AuditAndSecurity_package>
+		<Contact_assnlist>
+			<Person identifier="DJCV4V01:Person:skaush" name="skaush"/>
+		</Contact_assnlist>
+	</AuditAndSecurity_package>
+<Protocol_package>
+	<Hardware_assnlist>
+		<Hardware identifier="Affymetrix.com:Hardware:FluidicsStation">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationNumber" name="Station Number">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationPosition" name="Position">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationID" name="Station ID">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:FluidicsStationStage" name="Station Stage">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="HardwareType" value="Fluidics Station"/>
+			</Type_assn>
+		</Hardware>
+	</Hardware_assnlist>
+	<Software_assnlist>
+		<Software identifier="Affymetrix.com:Software:GeneChip">
+			<Type_assn>
+				<OntologyEntry category="SoftwareType" value="Acquisition and analysis software"/>
+			</Type_assn>
+		</Software>
+	</Software_assnlist>
+	<Protocol_assnlist>
+		<Protocol identifier="Affymetrix.com:Protocol:Hybridization-EukGE-WS3_450" name="EukGE-WS3_450" title="Fluidics Station Protocol">
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep0" name="Wash A1 Recovery Mixes">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep1" name="Wash A1 Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep2" name="Number of Wash A1 Cycles">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep3" name="Mixes per Wash A1 Cycle">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep4" name="Wash B Recovery Mixes">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep5" name="Wash B Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep6" name="Number of Wash B Cycles">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep7" name="Mixes per Wash B Cycle">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep8" name="Stain Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep9" name="First Stain Time (seconds)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep10" name="Wash A2 Recovery Mixes">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep11" name="Wash A2 Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep12" name="Number of Wash A2 Cycles">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep13" name="Mixes per Wash A2 Cycle">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep14" name="Second Stain Time (seconds)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep15" name="Third Stain Time (seconds)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep16" name="Wash A3 Recovery Mixes">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep17" name="Wash A3 Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep18" name="Number of Wash A3 Cycles">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep19" name="Mixes per Wash A3 Cycle">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep20" name="Holding Temperature (C)">
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Hybridization"/>
+			</Type_assn>
+			<Hardwares_assnreflist>
+				<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+			</Hardwares_assnreflist>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+		<Protocol identifier="Affymetrix.com:Protocol:UseCase_U2:Test3" title="Userset" name="UseCase_U2">
+			<PropertySets_assnlist>
+				<NameValueType name="Probe Array Type" value="Test3" type="string"/>
+			</PropertySets_assnlist>
+			<ParameterTypes_assnlist>
+				<Parameter identifier="Affymetrix.com:Parameter:HorizontalZones" name="HorizontalZones">
+					<DefaultValue_assn>
+						<Measurement value="4"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VerticalZones" name="VerticalZones">
+					<DefaultValue_assn>
+						<Measurement value="4"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NumBGCells" name="NumBGCells">
+					<DefaultValue_assn>
+						<Measurement value="2"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormFactor" name="NormFactor">
+					<DefaultValue_assn>
+						<Measurement value="1.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TGT" name="TGT">
+					<DefaultValue_assn>
+						<Measurement value="500.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleFactor" name="ScaleFactor">
+					<DefaultValue_assn>
+						<Measurement value="1.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:IntensityLowPercent" name="IntensityLowPercent">
+					<DefaultValue_assn>
+						<Measurement value="2.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:IntensityHighPercent" name="IntensityHighPercent">
+					<DefaultValue_assn>
+						<Measurement value="2.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Alpha1" name="Alpha1">
+					<DefaultValue_assn>
+						<Measurement value="0.040000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Alpha2" name="Alpha2">
+					<DefaultValue_assn>
+						<Measurement value="0.060000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Tau" name="Tau">
+					<DefaultValue_assn>
+						<Measurement value="0.015000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ContrastTau" name="ContrastTau">
+					<DefaultValue_assn>
+						<Measurement value="0.030000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Epsilon" name="Epsilon">
+					<DefaultValue_assn>
+						<Measurement value="0.500000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCSB" name="TuningConstantCSB">
+					<DefaultValue_assn>
+						<Measurement value="5.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogInten" name="TuningConstantCAvgLogInten">
+					<DefaultValue_assn>
+						<Measurement value="5.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCAvgLogRatio" name="TuningConstantCAvgLogRatio">
+					<DefaultValue_assn>
+						<Measurement value="5.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:TuningConstantCGammas" name="TuningConstantCGammas">
+					<DefaultValue_assn>
+						<Measurement value="5.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonSB" name="EpsilonSB">
+					<DefaultValue_assn>
+						<Measurement value="0.000100"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonAvgLogInten" name="EpsilonAvgLogInten">
+					<DefaultValue_assn>
+						<Measurement value="0.000100"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonAvgLogRatio" name="EpsilonAvgLogRatio">
+					<DefaultValue_assn>
+						<Measurement value="0.000100"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:EpsilonGammas" name="EpsilonGammas">
+					<DefaultValue_assn>
+						<Measurement value="0.000100"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:SmoothFactorBG" name="SmoothFactorBG">
+					<DefaultValue_assn>
+						<Measurement value="100.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NoiseFrac" name="NoiseFrac">
+					<DefaultValue_assn>
+						<Measurement value="0.500000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleTau" name="ScaleTau">
+					<DefaultValue_assn>
+						<Measurement value="10.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Delta" name="Delta">
+					<DefaultValue_assn>
+						<Measurement value="9.536743e-007"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma1H" name="Gamma1H">
+					<DefaultValue_assn>
+						<Measurement value="0.002500"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma1L" name="Gamma1L">
+					<DefaultValue_assn>
+						<Measurement value="0.002500"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma2H" name="Gamma2H">
+					<DefaultValue_assn>
+						<Measurement value="0.003000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Gamma2L" name="Gamma2L">
+					<DefaultValue_assn>
+						<Measurement value="0.005000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:Perturbation" name="Perturbation">
+					<DefaultValue_assn>
+						<Measurement value="1.100000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:CMultiplier" name="CMultiplier">
+					<DefaultValue_assn>
+						<Measurement value="0.200000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BHCoef" name="BHCoef">
+					<DefaultValue_assn>
+						<Measurement value="7.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BLCoef" name="BLCoef">
+					<DefaultValue_assn>
+						<Measurement value="0.800000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BiasCorrect" name="BiasCorrect">
+					<DefaultValue_assn>
+						<Measurement value="0.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:RelConfInterval" name="RelConfInterval">
+					<DefaultValue_assn>
+						<Measurement value="0.975000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:STP" name="STP">
+					<DefaultValue_assn>
+						<Measurement value="3.000000"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="float"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:AlgorithmName" name="Algorithm Name">
+					<DefaultValue_assn>
+						<Measurement value="ExpressionStat"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:VersionNumber" name="Version Number">
+					<DefaultValue_assn>
+						<Measurement value="5.0"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:BaselineFile" name="Baseline File">
+					<DefaultValue_assn>
+						<Measurement value=""/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ScaleMaskFile" name="Scale Mask File">
+					<DefaultValue_assn>
+						<Measurement value=""/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormMaskFile" name="Norm Mask File">
+					<DefaultValue_assn>
+						<Measurement value=""/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ProbeMaskFile" name="Probe Mask File">
+					<DefaultValue_assn>
+						<Measurement value=""/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:NormMethod" name="NormMethod">
+					<DefaultValue_assn>
+						<Measurement value="2"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:SFMethod" name="SFMethod">
+					<DefaultValue_assn>
+						<Measurement value="1"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="integer"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:ProgID" name="ProgID">
+					<DefaultValue_assn>
+						<Measurement value=""/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+				<Parameter identifier="Affymetrix.com:Parameter:UsersetUsed" name="UsersetUsed">
+					<DefaultValue_assn>
+						<Measurement value="UseCase_U2"/>
+					</DefaultValue_assn>
+					<DataType_assn>
+						<OntologyEntry category="DataType" value="string"/>
+					</DataType_assn>
+				</Parameter>
+			</ParameterTypes_assnlist>
+			<Type_assn>
+				<OntologyEntry category="ProtocolType" value="Userset"/>
+			</Type_assn>
+			<Softwares_assnreflist>
+				<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+			</Softwares_assnreflist>
+		</Protocol>
+	</Protocol_assnlist>
+</Protocol_package>
+<BioMaterial_package>
+	<BioMaterial_assnlist>
+		<BioSource identifier="DJCV4V01:BioSource:Wash_Stain_Example" name="Wash_Stain_Example">
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:34:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Characteristics_assnlist>
+				<OntologyEntry category="Affymetrix:Sample Project" value="DTT_1_1_Sample_data"/>
+			</Characteristics_assnlist>
+			<MaterialType_assn>
+				<OntologyEntry category="MaterialType" value="Sample File"/>
+			</MaterialType_assn>
+			<SourceContact_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:skaush"/>
+			</SourceContact_assnreflist>
+		</BioSource>
+	</BioMaterial_assnlist>
+</BioMaterial_package>
+<ArrayDesign_package>
+	<ArrayDesign_assnlist>
+		<PhysicalArrayDesign identifier="Affymetrix.com:PhysicalArrayDesign:Test3" name="Test3"/>
+	</ArrayDesign_assnlist>
+</ArrayDesign_package>
+<Array_package>
+	<Array_assnlist>
+		<Array identifier="Affymetrix.com:Array:Sample_1_Wash_Stain_Param">
+			<ArrayDesign_assnref>
+				<PhysicalArrayDesign_ref identifier="Affymetrix.com:PhysicalArrayDesign:Test3"/>
+			</ArrayDesign_assnref>
+			<Information_assnref>
+				<ArrayManufacture_ref identifier=""/>
+			</Information_assnref>
+		</Array>
+	</Array_assnlist>
+</Array_package>
+<BioAssay_package>
+	<BioAssay_assnlist>
+		<PhysicalBioAssay identifier="Affymetrix.com:PhysicalBioAssay:Sample_1_Wash_Stain_Param:Hybridization" name="Sample_1_Wash_Stain_Param">
+			<BioAssayCreation_assn>
+				<Hybridization identifier="DJCV4V01:Hybridization:Sample_1_Wash_Stain_Param" name="EukGE-WS3_450">
+					<ProtocolApplications_assnlist>
+						<ProtocolApplication activityDate="2005-07-17T05:41:00Z">
+							<ParameterValues_assnlist>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep0"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="25">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep1"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep2"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="2">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep3"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep4"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="50">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep5"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="5">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep6"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="15">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep7"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="25">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep8"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="300">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep9"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep10"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="25">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep11"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="10">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep12"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="4">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep13"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="300">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep14"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="300">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep15"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="0">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep16"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="30">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep17"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="15">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep18"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="4">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep19"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+								<ParameterValue value="25">
+									<ParameterType_assnref>
+										<Parameter_ref identifier="Affymetrix.com:Parameter:EukGE-WS3_450.HybridizationStep20"/>
+									</ParameterType_assnref>
+								</ParameterValue>
+							</ParameterValues_assnlist>
+							<HardwareApplications_assnlist>
+								<HardwareApplication>
+									<ParameterValues_assnlist>
+										<ParameterValue value="1">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationNumber"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="1">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationPosition"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="0">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationID"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+										<ParameterValue value="Completed">
+											<ParameterType_assnref>
+												<Parameter_ref identifier="Affymetrix.com:Parameter:FluidicsStationStage"/>
+											</ParameterType_assnref>
+										</ParameterValue>
+									</ParameterValues_assnlist>
+									<Hardware_assnref>
+										<Hardware_ref identifier="Affymetrix.com:Hardware:FluidicsStation"/>
+									</Hardware_assnref>
+								</HardwareApplication>
+							</HardwareApplications_assnlist>
+							<SoftwareApplications_assnlist>
+								<SoftwareApplication>
+									<Software_assnref>
+										<Software_ref identifier="Affymetrix.com:Software:GeneChip"/>
+									</Software_assnref>
+								</SoftwareApplication>
+							</SoftwareApplications_assnlist>
+							<Performers_assnreflist>
+								<Person_ref identifier="DJCV4V01:Person:skaush"/>
+							</Performers_assnreflist>
+							<Protocol_assnref>
+								<Protocol_ref identifier="Affymetrix.com:Protocol:Hybridization-EukGE-WS3_450"/>
+							</Protocol_assnref>
+						</ProtocolApplication>
+					</ProtocolApplications_assnlist>
+					<Array_assnref>
+						<Array_ref identifier="Affymetrix.com:Array:Sample_1_Wash_Stain_Param"/>
+					</Array_assnref>
+				</Hybridization>
+			</BioAssayCreation_assn>
+		</PhysicalBioAssay>
+	</BioAssay_assnlist>
+</BioAssay_package>
+<Experiment_package>
+	<Experiment_assnlist>
+		<Experiment identifier="DJCV4V01:Experiment:Sample_1_Wash_Stain_Param" name="Sample_1_Wash_Stain_Param">
+			<PropertySets_assnlist>
+				<NameValueType name="Assay Type" value="Expression" type="string"/>
+				<NameValueType name="Probe Array Type" value="Test3" type="string"/>
+				<NameValueType name="Barcode" value="@51055900247529010804300015384971" type="string"/>
+				<NameValueType name="Userset" value="UseCase_U2" type="string"/>
+				<NameValueType name="AutomationFlag" value="1" type="string"/>
+			</PropertySets_assnlist>
+			<AuditTrail_assnlist>
+				<Audit date="2005-07-17T05:34:00Z" action="creation"/>
+			</AuditTrail_assnlist>
+			<Providers_assnreflist>
+				<Person_ref identifier="DJCV4V01:Person:skaush"/>
+			</Providers_assnreflist>
+			<ExperimentDesigns_assnlist>
+				<ExperimentDesign/>
+			</ExperimentDesigns_assnlist>
+		</Experiment>
+	</Experiment_assnlist>
+</Experiment_package>
+</MAGE-ML>

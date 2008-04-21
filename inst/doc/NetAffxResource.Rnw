@@ -1,0 +1,149 @@
+%\VignetteDepends{AffyCompatible}
+%\VignetteIndexEntry{Annotation retrieval with NetAffxResource}
+%\VignetteKeywords{tutorial, AffyCompatible, NetAffx, NetAffxResource}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\newcommand{\R}{{\textsf{R}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+\newcommand{\term}[1]{{\emph{#1}}}
+\newcommand{\Rpackage}[1]{\textsf{#1}}
+\newcommand{\Rfunction}[1]{\texttt{#1}}
+\newcommand{\Robject}[1]{\texttt{#1}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+
+\newcommand{\Affy}{Affymetrix}
+\newcommand{\Bioc}{Bioconductor}
+
+\title{Annotations with NetAffx}
+\author{Martin Morgan, Robert Gentleman}
+\date{Created: 19 February 2008}
+
+\begin{document}
+\maketitle
+
+\Affy{} provides annotations for all arrays they produce. The
+annotations are made available in \Bioc{} with the
+\Rclass{NetAffxResource} class in the \Rpackage{AffyCompatible}
+package; additional packages complement \Affy{} annotation information
+with data collected from additional public repositories. This document
+outlines a simple workflow to retrieve annotations available through
+NetAffx.
+<<setup>>=
+library(AffyCompatible)
+@ 
+%% 
+To use these facilities, one must be a registered \Affy{} user; see
+the \Affy{}
+\href{https://www.affymetrix.com/site/login/login.affx}{user
+registration} site for details.
+
+The first step is to create an instance of the
+\Rclass{NetAffxResource} class.  Do this using the
+\Rfunction{NetAffxResource} function.  Important arguments are
+\Rfunarg{user}, \Rfunarg{password}, and \Rfunarg{affxLicence}, length
+1 character vectors containing the registered user name and password,
+and institutional licence (available from Affymetrix). The password is
+printed, saved, and transmitted in clear text, and so is \textbf{not}
+secure. An additional argument is \Rfunarg{directory}, which is the
+location where the NetAffx data base and downloaded files are
+stored. \Rfunarg{directory} defaults to a session-specific temporary
+directory, meaning that if it is not supplied the data base and any
+downloaded annotations are removed when the R session ends. To create
+the \Rclass{NetAffxResource} instance, evaluate a command like
+<<rsrc-setup,echo=FALSE>>=
+affxLicence <- "FHCRC0607"
+password <- "jnkdna"
+@ 
+<<rsrc>>=
+rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password,
+                        affxLicence=affxLicence)
+rsrc
+@ 
+%% 
+This creates the resource, but does not validate the user name and
+password (the user name and password are verified when the NetAffx
+resource is first retrieved from \Affy{}, typically the first time the
+code in the following paragraph is evaluated).
+
+A typical workflow involves querying \Robject{rsrc} for the names of
+available arrays, and the descriptions of annotations available for an
+array of interest:
+<<names>>=
+head(names(rsrc))
+affxDescription(rsrc[["Bovine"]])
+@ 
+%% 
+Annotations usually include a comma-separated value (CSV) file that
+can be represented in R as a \Robject{data.frame}. The data frame
+usually includes a probe identifier column, and columns of additional
+information \Affy{} has collated from a variety of sources, as
+described on the NetAffx site. Additional annotation files usually
+include a (much larger physically, but containing comparable
+information) MAGE-ML representation of the CSV file, channel
+description files (CDF), other files describing probes preesent on
+chips, probe sequences in FASTA format, and possibly other files
+specific to the chip platform. 
+
+An R representation of the annotations of a particular array can be
+created with
+<<select-anno>>=
+annos <- rsrc[["Porcine"]]
+annos
+@ 
+%% 
+A particular annotation can be selected from this using R commands to
+navigate the implied class structure:
+<<anno-class>>=
+sapply(affxAnnotation(annos), force)[1:5]
+anno <- affxAnnotation(annos)[[3]]
+anno
+@ 
+%% 
+(The Porcine BLASTP Annotation file is chosen because it is
+small). The annotation file may also be obtained by subsetting the
+reseource with a second argument corresponding to the annotation
+description or index
+<<select-anno-idx>>=
+anno <- rsrc[["Porcine", "BLASTP annotations, CSV Format"]]
+anno <- rsrc[["Porcine", 3]]
+@ 
+
+Annotation files can be retrieved with
+<<readAnnotation>>=
+df <- readAnnotation(rsrc, annotation=anno)
+@ 
+%% 
+This checks to see if the relevant annotation file is in the directory
+specified in the \Robject{rsrc} object. If the annotation file is not
+present, it is retrieved from the \Affy{} site. The argument
+\Rfunarg{update=TRUE} forces retrieval. \Rfunction{readAnnotation}
+will read files with known type (e.g., CSV) into appropriate R objects
+(e.g., data frames), and return these from
+\Rfunction{readAnnotation}. Some file types (e.g., CDF) are not meant
+for representation as R objects, and for these
+\Rfunction{readAnnotation} returns the (local) path to the relevant
+file. For all annotations, the argument \Rfunarg{content=FALSE}
+returns the local file path, without loading the content of the file
+into R.
+
+\Affy{} does not specify the format of all files, so some files might
+reasonably be read into R but the \Rfunction{readAnnotation} code is
+not able to identify the appropriate format. The user is free to
+explore these annotation files using standard R commands, e.g.,
+<<anno-free-form, keep.source=TRUE>>=
+anno <- rsrc[["Porcine", "PSI Library File"]]
+fl <- readAnnotation(rsrc, annotation=anno, content=FALSE)
+fl
+## a zip file, containing 'Porcine.psi'
+conn <- unz(fl, "Porcine.psi")
+readLines(conn, n=6)
+read.table(conn, header=FALSE, skip=1, sep="\t", nrows=5)
+@ 
+
+\end{document}
