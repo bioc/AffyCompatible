@@ -33,12 +33,12 @@
 }
 
 .xvalue <- function(xmlNode, xpathq) {
-  unlist(xpathApply(xmlNode, xpathq, xmlValue))
+  unlist(xpathApply(xmlDoc(xmlNode), xpathq, xmlValue))
 }
 
 .xpcdata <- function(xmlNode) {
   ## FIXME: comments?
-  xpathApply(xmlNode, "/*/text()", xmlValue)
+  xpathApply(xmlDoc(xmlNode), "/*/text()", xmlValue)
 }
 
 .xattrs <- function(xmlNode, prefix) {
@@ -48,7 +48,7 @@
 }
 
 .xassn <- function(xmlNode, xpath, type_constructor, assn_constructor) {
-  types <- xpathApply(xmlNode, xpath, type_constructor)
+  types <- xpathApply(xmlDoc(xmlNode), xpath, type_constructor)
   assn_constructor(types)
 }
 
@@ -60,7 +60,7 @@
   if (".Data" %in% slotNames(getClass(nodeNm)))
     pcdata <- .xpcdata(node)
   attrs <- .xattrs(node, prefix)
-  assnNodes <- xpathApply(node, "/*/*")
+  assnNodes <- xpathApply(xmlDoc(node), "/*/*")
   if (length(assnNodes)>0) {
     nms <- .xclassnames(sapply(assnNodes, xmlName), prefix=prefix)
     elts <- lapply(assnNodes, .xclass, prefix=prefix)
