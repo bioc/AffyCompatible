@@ -1,7 +1,11 @@
 importFrom(Biostrings, readFASTA)
+importFrom(XML, xmlValue)
 
 ## other methods are exported with their generic
 exportMethods(show)
+
+## patch XML
+S3method(xmlValue, XMLAttributeValue)
 
 ## .* are not exported
 exportPattern("^[^\\.]")          # functions and generics (+ methods)

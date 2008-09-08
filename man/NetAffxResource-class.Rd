@@ -146,19 +146,16 @@ Class \code{"\linkS4class{AffyCompatible}"}, by class "NetAffxCompatibility", di
   session. 
 }
 \examples{
-\dontshow{
-    password="jnkdna"
-    affxLicence="FHCRC0607"
+if (exists("username") && exists("password") && exists("affxLicence")) {
+    rsrc <- NetAffxResource(user=username, password=password,
+        affxLicence=affxLicence)
+    head(names(rsrc))
+    affxDescription(rsrc[["Bovine"]])
+    ## paradigm to display all elements of 'annotation'
+    sapply(affxAnnotation(rsrc[["Bovine"]]), force)
+    ## obtain and read a single annotation
+    anno <- rsrc[["Porcine", "BLASTP annotations, CSV Format"]]
+    df <- readAnnotation(rsrc, annotation=anno)
 }
-## password and affxLicence must be obtained by the user
-rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password,
-    affxLicence=affxLicence)
-head(names(rsrc))
-affxDescription(rsrc[["Bovine"]])
-## paradigm to display all elements of 'annotation'
-sapply(affxAnnotation(rsrc[["Bovine"]]), force)
-## obtain and read a single annotation
-anno <- rsrc[["Porcine", "BLASTP annotations, CSV Format"]]
-df <- readAnnotation(rsrc, annotation=anno)
 }
 \keyword{classes}
