@@ -19,7 +19,7 @@ setMethod(".validity", "NetAffxResource", .NetAffxResource_validity)
 .getters("NetAffxResource")
 
 NetAffxResource <- function(user=character(0), password=character(0),
-                            affxLicence=character(0),
+                            affxLicence="FHCRC0607",
                             directory=tempdir(), ...) {
   new("NetAffxResource", ..., user=user, password=password,
       affxLicence=affxLicence, directory=directory)

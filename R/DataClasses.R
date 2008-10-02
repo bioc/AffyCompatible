@@ -23,5 +23,6 @@ setClass("NetAffxResource",
          prototype=prototype(
            directory=tempdir(),
            annotationsFile="NetAffxAnnotFileList.xml",
-           affxUrl="https://www.affymetrix.com/analysis/downloads/netaffxapi/GetFileList.jsp"),
+           affxUrl="https://www.affymetrix.com/analysis/downloads/netaffxapi/GetFileList.jsp",
+           affxLicence="FHCRC0607"),
          validity=.validity)

@@ -29,9 +29,8 @@
   the `Annotations with NetAffx' vignette.}
 \section{Objects from the Class}{
   Objects are created by calls of the form
-  \code{NetAffxResource(user="user@research.org", password="terces",
-  affxLicence="SITELICENCE")}, as illustrated below and in the
-  `Annotations with NetAffx vignette.
+  \code{NetAffxResource(user="user@research.org", password="terces")},
+  as illustrated below and in the `Annotations with NetAffx vignette.
 }
 \section{Slots}{
   \describe{
@@ -142,17 +141,14 @@ Class \code{"\linkS4class{AffyCompatible}"}, by class "NetAffxCompatibility", di
   \url{https://www.affymetrix.com/site/login/login.affx}.
 
   \code{\link{.Rprofile}} for ways to automatically set variables (such
-  as \code{affxLicence}, \code{password}, and \code{directory}) for each
-  session. 
+  as \code{password}, and \code{directory}) for each session.
 }
 \examples{
 \dontshow{
     password="jnkdna"
-    affxLicence="FHCRC0607"
 }
-## password and affxLicence must be obtained by the user
-rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password,
-    affxLicence=affxLicence)
+## password must be obtained by the user
+rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password)
 head(names(rsrc))
 affxDescription(rsrc[["Bovine"]])
 ## paradigm to display all elements of 'annotation'

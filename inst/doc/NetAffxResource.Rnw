@@ -46,9 +46,8 @@ registration} site for details.
 The first step is to create an instance of the
 \Rclass{NetAffxResource} class.  Do this using the
 \Rfunction{NetAffxResource} function.  Important arguments are
-\Rfunarg{user}, \Rfunarg{password}, and \Rfunarg{affxLicence}, length
-1 character vectors containing the registered user name and password,
-and institutional licence (available from Affymetrix). The password is
+\Rfunarg{user} and \Rfunarg{password} length 1 character vectors
+containing the registered user name and password. The password is
 printed, saved, and transmitted in clear text, and so is \textbf{not}
 secure. An additional argument is \Rfunarg{directory}, which is the
 location where the NetAffx data base and downloaded files are
@@ -57,12 +56,10 @@ directory, meaning that if it is not supplied the data base and any
 downloaded annotations are removed when the R session ends. To create
 the \Rclass{NetAffxResource} instance, evaluate a command like
 <<rsrc-setup,echo=FALSE>>=
-affxLicence <- "FHCRC0607"
 password <- "jnkdna"
 @ 
 <<rsrc>>=
-rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password,
-                        affxLicence=affxLicence)
+rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password)
 rsrc
 @ 
 %% 

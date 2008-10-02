@@ -11,7 +11,7 @@
 \usage{
 NetAffxResource(user = character(0),
     password = character(0),
-    affxLicence = character(0),
+    affxLicence = "FHCRC0607",
     directory = tempdir(), ...)
 }
 
@@ -22,7 +22,8 @@ NetAffxResource(user = character(0),
   \item{password}{Length 1 character vector containing the Affymetrix
     password of the user.}
   \item{affxLicence}{Length 1 character vector containing the Affymetrix
-    licence (typically site-specific) of the user.}
+    licence (typically application specific, i.e., the specified licence
+    covers AffyCompatible).}
   \item{directory}{(Optional) length 1 character vector providing the
     full path to the local directory where the NetAffx database and
     files will be managed. Defaults to a session-specific temporary
