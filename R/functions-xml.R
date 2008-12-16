@@ -78,7 +78,7 @@
   } else {
     assns <- list()
   }
-  do.call("new", c(nodeNm, pcdata, attrs, assns))
+  do.call(new, c(nodeNm, pcdata, attrs, assns))
 }
 
 xclass <- function(doc, xpathq, prefix=character(0)) {

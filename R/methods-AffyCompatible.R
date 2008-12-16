@@ -28,7 +28,7 @@
     }
     elts <- .xnames(cls, prefix)
     slts[elts] <- ".TypedAssociation"
-    do.call("setClass",
+    do.call(setClass,
             list(elt$name,
                  representation=do.call("representation", slts),
                  contains=contains))
@@ -45,7 +45,7 @@
     if (verbose) cat(elt$name, "\n")
     switch(class(contents),
            "NULL"={
-             do.call("setClass",
+             do.call(setClass,
                      list(elt$name,
                      representation=do.call("representation", slts),
                      contains=contains))
