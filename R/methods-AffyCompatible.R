@@ -30,7 +30,7 @@
     slts[elts] <- ".TypedAssociation"
     do.call(setClass,
             list(elt$name,
-                 representation=do.call("representation", slts),
+                 representation=do.call(representation, slts),
                  contains=contains))
     
   }
@@ -47,7 +47,7 @@
            "NULL"={
              do.call(setClass,
                      list(elt$name,
-                     representation=do.call("representation", slts),
+                     representation=do.call(representation, slts),
                      contains=contains))
            },
            XMLElementContent={
