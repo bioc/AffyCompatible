@@ -4,9 +4,9 @@
 \description{
 
   This functions reads the content of Affymetrix ARR sample attribute
-  files created by GeneChip\textregistered{} Command Console. Objects
-  are represented as R classes. Navigation and extraction of data are
-  described in the vignette `Retrieving MAGE and ARR sample attributes'.
+  files created by GeneChip(R) Command Console. Objects are represented
+  as R classes. Navigation and extraction of data are described in the
+  vignette `Retrieving MAGE and ARR sample attributes'.
 
 }
 \usage{
