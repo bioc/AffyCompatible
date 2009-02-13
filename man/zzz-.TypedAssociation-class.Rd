@@ -2,7 +2,8 @@
 \docType{class}
 \alias{zzz-.TypedAssociation-class}
 \alias{.TypedAssociation-class}
-\alias{[,.TypedAssociation,ANY,ANY,ANY-method}
+\alias{[,.TypedAssociation,ANY,ANY-method}
+\alias{[,.TypedAssociation,numeric,missing-method}
 \alias{[,.TypedAssociation,numeric,missing,ANY-method}
 \alias{show,.TypedAssociation-method}
 

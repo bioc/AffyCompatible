@@ -1,7 +1,7 @@
 Package: AffyCompatible
 Type: Package
 Title: Affymetrix GeneChip software compatibility
-Version: 1.3.1
+Version: 1.3.2
 Author: Martin Morgan <mtmorgan@fhcrc.org>, Robert Gentleman <rgentlem@fhcrc.org>
 Maintainer: Martin Morgan <mtmorgan@fhcrc.org>
 Depends: R (>= 2.7.0), XML (>= 1.99-0), RCurl (>= 0.8-1), methods
