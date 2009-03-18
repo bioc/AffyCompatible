@@ -141,7 +141,7 @@ unlist(xpathApply(xml, "//UserAttribute/@Name", xmlValue))
 \section{Reading sample attributes from \texttt{MAGE} files}
 
 \texttt{MAGE} files are produced by GCOS, with one file per
-sample. Examples are inluced in this package
+sample. Examples are included in this package
 <<mage-examples>>=
 mageDir <- system.file("extdata", "DTT", package="AffyCompatible")
 mageFiles <- list.files(mageDir, pattern=".*xml", full=TRUE)
@@ -175,7 +175,7 @@ xpathApply(xml, "//MeasuredBioAssay/@name", xmlValue)
 % 
 Note that MAGE attribute names are lower-case, in contrast to ARR
 attribute names. A document describing XPaths to important MAGE attributes is referenced below. With this in hand,
-one can obtain, for instance, a named list of all hardware parameters, use
+one can obtain, for instance, a named list of all hardware parameters
 <<mage-hardware-xml>>=
 hq <- "//Hybridization/*/ProtocolApplication/*/HardwareApplication/*/ParameterValue"
 hval <- xpathApply(xml, paste(hq, "/@value"), xmlValue)
