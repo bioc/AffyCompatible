@@ -123,10 +123,16 @@ Class \code{"\linkS4class{AffyCompatible}"}, by class "NetAffxCompatibility", di
       (\code{content=FALSE}) and \code{update = "logical"} indicating
       whether the file should be read from disk if available
       (\code{update=FALSE}, default) or retrieved from the NetAffx web
-      site (\code{update=TRUE}). \code{readAnnotation} parses \code{CSV,
-	Tabular, PSI} to data frames, and reads \code{FASTA} files to a
-      list of description / sequence pairs (see
+      site (\code{update=TRUE}). \code{readAnnotation} parses CSV,
+	  Tabular, and PSI files to data frames, and reads \code{FASTA}
+      files to a list of description / sequence pairs (see
       \code{Biostrings::readFASTA}).
+
+	  The \code{...} argument is passed to corresponding read
+	  functions. CSV files are parsed using \code{read.csv(conn, ...)},
+	  Tabular files with \code{read.delim(conn, ...)}, PSI files with
+	  \code{read.delim(conn, header=FALSE, skip=1, sep="\t", ...)}, and
+	  FASTA with readFASTA(conn, ...).
     }
     \item{show}{\code{signature(object = "NetAffxResource")}: compactly
       show the \code{NetAffxResource} object.}

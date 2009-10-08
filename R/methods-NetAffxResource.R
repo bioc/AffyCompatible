@@ -273,10 +273,10 @@ setMethod("readAnnotation",
   on.exit(unlink(fileName))
   res <-
     switch(sub(".* ", "", affxType(annotation)),
-           CSV=read.csv(conn),
-           Tabular=read.delim(conn),
-           FASTA=readFASTA(conn),
-           PSI=read.delim(conn, header=FALSE, skip=1, sep="\t"),
+           CSV=read.csv(conn, ...),
+           Tabular=read.delim(conn, ...),
+           FASTA=readFASTA(conn, ...),
+           PSI=read.delim(conn, header=FALSE, skip=1, sep="\t", ...),
            {
              close(conn)
              message("returning path to file of affxType '",
