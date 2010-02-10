@@ -173,7 +173,7 @@ setMethod("show",
   annotFile <- .netAffxAnnotListFile(netAffxResource)
   if (update || !file.exists(annotFile)) {
     url <- .netAffxUrl(netAffxResource)
-    .opts <- curlOptions(ssl.verifypeer=FALSE)
+    .opts <- curlOptions(ssl.verifypeer=FALSE, followlocation=TRUE)
     rsrc <- getURL(url, .opts=.opts)
     tmpfile <- tempfile()
     cat(rsrc, file=tmpfile) # save to file; XML 1.93 fails to parse long first args
