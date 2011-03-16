@@ -2,6 +2,17 @@
 \docType{class}
 \alias{zzz-ARRCompatibility-class}
 
+% classes
+\alias{UserAttribute-class}
+\alias{ArraySetFile-class}
+\alias{Control-class}
+\alias{UserAttributes-class}
+\alias{PhysicalArrays-class}
+\alias{TemplateFile-class}
+\alias{ArrayAttribute-class}
+\alias{UserAttributeValue-class}
+\alias{PhysicalArray-class}
+
 % generic accessors
 \alias{affyBarcode}
 \alias{arrayAttribute}

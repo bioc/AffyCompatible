@@ -2,6 +2,15 @@
 \docType{class}
 \alias{zzz-NetAffxCompatibility-class}
 
+% classes
+\alias{AffxComment-class}
+\alias{AffxUrl-class}
+\alias{AffxStatus-class}
+\alias{AffxFile-class}
+\alias{AffxNetAffxAnnotFileList-class}
+\alias{AffxAnnotation-class}
+\alias{AffxArray-class}
+
 \alias{affxAnnotation}
 \alias{affxArray}
 \alias{affxComment}
