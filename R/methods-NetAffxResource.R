@@ -251,6 +251,14 @@ setMethod("readAnnotation",
   file.path(directory(netAffxResource), basename(url))
 }
 
+.readFASTA <- function(conn, ...)
+    ## readDNAStringSet does not handle connections
+{
+    fl <- tempfile()
+    writeLines(readLines(conn), fl)
+    readDNAStringSet(fl, ...)
+}
+
 .readAnnotation <- function(netAffxResource, annotation, fileIndex=1,
                             ..., content=TRUE, update=FALSE) {
   affxUrl <- affxUrl(affxFile(annotation)[[fileIndex]])[[1]]
@@ -275,7 +283,7 @@ setMethod("readAnnotation",
     switch(sub(".* ", "", affxType(annotation)),
            CSV=read.csv(conn, ...),
            Tabular=read.delim(conn, ...),
-           FASTA=readFASTA(conn, ...),
+           FASTA=.readFASTA(conn, ...),
            PSI=read.delim(conn, header=FALSE, skip=1, sep="\t", ...),
            {
              close(conn)

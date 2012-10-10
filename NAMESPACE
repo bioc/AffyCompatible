@@ -1,4 +1,4 @@
-importFrom(Biostrings, readFASTA)
+importFrom(Biostrings, readDNAStringSet)
 importFrom(XML, xmlValue)
 
 ## other methods are exported with their generic

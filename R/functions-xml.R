@@ -86,9 +86,9 @@ xclass <- function(doc, xpathq, prefix=character(0)) {
 }
 
 .readXmlAsClass <- function(fl, ..., prefix=character(0)) {
-  xml <- xmlTreeParse(fl, useInternal=TRUE, ...)
+  xml <- xmlTreeParse(fl, useInternalNodes=TRUE, ...)
   xclass(xml, "/*", ..., prefix=prefix)
 }
 
 readXml <- function(fl, ...)
-  xmlTreeParse(fl, useInternal=TRUE, ...)
+  xmlTreeParse(fl, useInternalNodes=TRUE, ...)
