@@ -107,7 +107,7 @@ small). The annotation file may also be obtained by subsetting the
 reseource with a second argument corresponding to the annotation
 description or index
 <<select-anno-idx>>=
-anno <- rsrc[["Porcine", "BLASTP annotations, CSV Format"]]
+anno <- rsrc[["Porcine", "Annotations, CSV format"]]
 anno <- rsrc[["Porcine", 3]]
 @ 
 
