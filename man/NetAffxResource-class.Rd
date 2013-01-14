@@ -160,7 +160,7 @@ affxDescription(rsrc[["Bovine"]])
 ## paradigm to display all elements of 'annotation'
 sapply(affxAnnotation(rsrc[["Bovine"]]), force)
 ## obtain and read a single annotation
-anno <- rsrc[["Porcine", "BLASTP annotations, CSV Format"]]
+anno <- rsrc[["Porcine", "Annotations, CSV Format"]]
 df <- readAnnotation(rsrc, annotation=anno)
 }
 \keyword{classes}
