@@ -6,7 +6,8 @@
   AffyCompatible
 }
 \usage{
-xmlValue.XMLAttributeValue(x, ignoreComments = FALSE, recursive = TRUE, encoding=XML:::CE_NATIVE)
+\method{xmlValue}{XMLAttributeValue}(x, ignoreComments = FALSE, recursive = TRUE, 
+    encoding=XML:::CE_NATIVE)
 }
 \arguments{
   \item{x}{An object of class \code{XMLAttributeValue}.}
