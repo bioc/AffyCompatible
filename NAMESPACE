@@ -1,5 +1,5 @@
 import(methods)
-import(RCurl, curlOptions, getURL)
+importFrom(RCurl, curlOptions, getURL)
 importFrom(Biostrings, readDNAStringSet)
 importFrom(XML, xmlValue)
 
