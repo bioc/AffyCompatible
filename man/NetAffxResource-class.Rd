@@ -151,7 +151,7 @@ Class \code{"\linkS4class{AffyCompatible}"}, by class "NetAffxCompatibility", di
 }
 \examples{
 \dontshow{
-    password="jnkdna"
+  password = acpassword
 }
 ## password must be obtained by the user
 rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password)

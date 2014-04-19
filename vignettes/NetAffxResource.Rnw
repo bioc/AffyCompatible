@@ -56,7 +56,7 @@ directory, meaning that if it is not supplied the data base and any
 downloaded annotations are removed when the R session ends. To create
 the \Rclass{NetAffxResource} instance, evaluate a command like
 <<rsrc-setup,echo=FALSE>>=
-password <- "jnkdna"
+password <- AffyCompatible:::acpassword
 @ 
 <<rsrc>>=
 rsrc <- NetAffxResource(user="mtmorgan@fhcrc.org", password=password)
