@@ -1,6 +1,7 @@
 \name{NetAffxResource}
 
 \alias{NetAffxResource}
+\alias{acpassword}
 
 \title{Create and access a NetAffxResource database}
 \description{
