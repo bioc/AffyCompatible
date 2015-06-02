@@ -1,9 +1,9 @@
 Package: AffyCompatible
 Type: Package
 Title: Affymetrix GeneChip software compatibility
-Version: 1.29.0
+Version: 1.29.1
 Author: Martin Morgan, Robert Gentleman
-Maintainer: Martin Morgan <mtmorgan@fhcrc.org>
+Maintainer: Martin Morgan <mtmorgan@fredhutch.org>
 Depends: R (>= 2.7.0), XML (>= 2.8-1), RCurl (>= 0.8-1), methods
 Imports: Biostrings
 Description: This package provides an interface to Affymetrix chip
