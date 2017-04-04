@@ -1,7 +1,9 @@
 import(methods)
+importFrom(utils, download.file, read.csv, read.delim)
 importFrom(RCurl, curlOptions, getURL)
 importFrom(Biostrings, readDNAStringSet)
-importFrom(XML, xmlValue)
+importFrom(XML, xmlValue, xmlAttrs, xmlDoc, xmlName, xmlTreeParse,
+    xpathApply)
 
 ## other methods are exported with their generic
 exportMethods(show)
